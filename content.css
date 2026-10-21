@@ -1,0 +1,43 @@
+/* Só vale na página de episódio (/watch/) e quando o modo está ligado */
+html.crtc-on,
+html.crtc-on body {
+  overflow: hidden !important;
+}
+
+html.crtc-on .video-player-wrapper {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  margin: 0 !important;
+  z-index: 2147483000 !important;
+  background: #000 !important;
+}
+
+html.crtc-on .video-player-spacer {
+  display: none !important;
+}
+
+html.crtc-on .video-player-wrapper .video-player,
+html.crtc-on .video-player-wrapper #player-container,
+html.crtc-on .video-player-wrapper .bitmovinplayer-container {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+html.crtc-on .video-player-wrapper video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Cabeçalho do site some de vez */
+html.crtc-on .erc-large-header,
+html.crtc-on [class*="app-layout__header"] {
+  display: none !important;
+}

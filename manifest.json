@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Crunchyroll Tela Cheia",
+  "version": "1.0.0",
+  "description": "Deixa o player do Crunchyroll ocupando a janela toda, sem barras e menus do site, igual à Netflix.",
+  "action": {
+    "default_title": "Ligar/desligar tela cheia (atalho: T)"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.crunchyroll.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
